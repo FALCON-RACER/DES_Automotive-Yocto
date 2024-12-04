@@ -1,1 +1,1 @@
-# DES_Yocto-IC-HU
+# DES_Automotive-Yocto
