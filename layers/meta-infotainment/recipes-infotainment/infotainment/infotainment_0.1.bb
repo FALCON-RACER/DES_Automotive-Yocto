@@ -8,24 +8,44 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"
 
-IMAGE_INSTALL += "\
-	qtbase \
-	qtdeclarative \
-	qtquick3d \
-	qtquicktimeline \
-	qtserialbus \
-	qtremoteobjects \
-	qtscxml \
-	qtwayland \
-	qttools \
-	weston \
-	weston-init \
-	can-utils \
-	init-scripts \
-	instrument-cluster \
-	head-unit \
+SYSTEM_PACKAGES = "\
+    systemd \
+    systemd-analyze \
 "
 
+NETWORK_PACKAGES = "\
+    wpa-supplicant \
+    can-utils \
+    openssh \
+"
 
+QT_PACKAGES = "\
+    qtbase \
+    qtdeclarative \
+    qtwayland \
+    qttools \
+"
 
+GRAPHICS_PACKAGES = "\
+    weston \
+    weston-init \
+"
 
+APPLICATION_PACKAGES = "\
+    instrument-cluster \
+    head-unit \
+"
+
+UTILITY_PACKAGES = "\
+    init-scripts \
+    autologin \
+"
+
+IMAGE_INSTALL += "\
+    ${SYSTEM_PACKAGES} \
+    ${NETWORK_PACKAGES} \
+    ${QT_PACKAGES} \
+    ${GRAPHICS_PACKAGES} \
+    ${APPLICATION_PACKAGES} \
+    ${UTILITY_PACKAGES} \
+"
