@@ -1,0 +1,7 @@
+# Allow both IPv4 and IPv6
+AddressFamily any
+# Listen on all interfaces
+ListenAddress ::
+# Other SSH settings...
+PermitRootLogin yes
+PasswordAuthentication yes
