@@ -10,7 +10,6 @@ IMAGE_ROOTFS_SIZE ?= "8192"
 
 SYSTEM_PACKAGES = "\
     systemd \
-    systemd-analyze \
 "
 
 NETWORK_PACKAGES = "\
@@ -36,16 +35,16 @@ APPLICATION_PACKAGES = "\
     head-unit \
 "
 
-UTILITY_PACKAGES = "\
+CUSTOM_PACKAGES = "\
     init-scripts \
-    autologin \
+    run-apps \
+    weston-config \
 "
-
 IMAGE_INSTALL += "\
     ${SYSTEM_PACKAGES} \
     ${NETWORK_PACKAGES} \
-    ${QT_PACKAGES} \
     ${GRAPHICS_PACKAGES} \
+    ${QT_PACKAGES} \
     ${APPLICATION_PACKAGES} \
-    ${UTILITY_PACKAGES} \
+    ${CUSTOM_PACKAGES} \
 "
