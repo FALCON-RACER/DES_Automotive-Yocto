@@ -39,6 +39,8 @@ CUSTOM_PACKAGES = "\
     init-scripts \
     run-apps \
     weston-config \
+    wpa-config \
+    sshd-config \
 "
 IMAGE_INSTALL += "\
     ${SYSTEM_PACKAGES} \
