@@ -1,4 +1,3 @@
 LINUX_VERSION = "6.1.46"
 SRCREV_machine = "e89e7655a197d28df49da2be7e2003436cf52197"
-
-PREFERRED_VERSION_linux-raspberrypi = "6.1%"
+KERNEL_DEVICETREE:append = " overlays/vc4-kms-dsi-waveshare-panel.dtbo"
