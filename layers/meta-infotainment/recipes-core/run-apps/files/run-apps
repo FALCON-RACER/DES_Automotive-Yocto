@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export QT_QPA_PLATFORM=wayland
+
+head-unit QT_QPA_PLATFORM=wayland &
+instrument-cluster QT_QPA_PLATFORM=wayland &

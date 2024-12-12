@@ -1,0 +1,14 @@
+[Unit]
+Description=Run Applications on Weston
+After=weston.service
+Requires=weston.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/run-apps
+Environment=QT_QPA_PLATFORM=wayland
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
