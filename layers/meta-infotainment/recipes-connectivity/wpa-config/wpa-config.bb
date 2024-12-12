@@ -1,10 +1,30 @@
-DESCRIPTION = "WiFi Configuration"
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+SUMMARY = "Connect SEA:ME Wifi"
+LICENSE = "CLOSED"
 
-SRC_URI = "file://wpa_supplicant.conf"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
+SRC_URI = "file://wpa-supplicant-wlan0.service \
+           file://udhcpc-i-wlan0.service \
+           file://route-i-wlan0.service \
+           "
+
+inherit systemd
+
+S = "${WORKDIR}"
+SYSTEMD_SERVICE:${PN} = "wpa-supplicant-wlan0.service \
+                         udhcpc-i-wlan0.service \
+                         route-i-wlan0.service \
+                         "
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 do_install() {
-    install -d ${D}${sysconfdir}/wpa_supplicant
-    install -m 0644 ${WORKDIR}/wpa_supplicant.conf ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant.conf
+    install -d ${D}${systemd_unitdir}/system
+    install -m 0644 wpa-supplicant-wlan0.service ${D}${systemd_unitdir}/system
+    install -m 0644 udhcpc-i-wlan0.service ${D}${systemd_unitdir}/system
+    install -m 0644 route-i-wlan0.service ${D}${systemd_unitdir}/system
 }
+
+FILES:${PN} += "${systemd_unitdir}/system/wpa-supplicant-wlan0.service"
+FILES:${PN} += "${systemd_unitdir}/system/udhcpc-i-wlan0.service"
+FILES:${PN} += "${systemd_unitdir}/system/route-i-wlan0.service"
+
