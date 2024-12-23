@@ -26,8 +26,8 @@ QT_PACKAGES = "\
 "
 
 GRAPHICS_PACKAGES = "\
-    weston \
-    weston-init \
+    wayland \
+    wayland-layer-manager \
 "
 
 APPLICATION_PACKAGES = "\
@@ -37,16 +37,17 @@ APPLICATION_PACKAGES = "\
 
 CUSTOM_PACKAGES = "\
     init-scripts \
-    run-apps \
-    weston-config \
     wpa-config \
     sshd-config \
+    autologin \
+    run-apps \
 "
+
 IMAGE_INSTALL += "\
     ${SYSTEM_PACKAGES} \
     ${NETWORK_PACKAGES} \
-    ${GRAPHICS_PACKAGES} \
     ${QT_PACKAGES} \
+    ${GRAPHICS_PACKAGES} \
     ${APPLICATION_PACKAGES} \
     ${CUSTOM_PACKAGES} \
 "
