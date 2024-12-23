@@ -1,6 +1,13 @@
 #!/bin/sh
 
-export QT_QPA_PLATFORM=wayland
+SOCKET_PATH="/run/user/0/wayland-0"
 
-head-unit QT_QPA_PLATFORM=wayland &
-instrument-cluster QT_QPA_PLATFORM=wayland &
+echo "sibal fuck"
+
+while [ ! -S "$SOCKET_PATH" ]; do
+    echo "Waiting for Wayland compositor to be ready..."
+    sleep 1
+done
+
+QT_IVI_SURFACE_ID=1000 head-unit -platform wayland &
+QT_IVI_SURFACE_ID=2000 instrument-cluster -platform wayland &

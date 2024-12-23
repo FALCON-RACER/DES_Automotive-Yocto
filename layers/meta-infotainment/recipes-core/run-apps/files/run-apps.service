@@ -1,13 +1,13 @@
 [Unit]
-Description=Run Applications on Weston
-After=weston.service
-Requires=weston.service
+Description=Run Applications
+After=wayland-layer-manager.service
+Requires=wayland-layer-manager.service
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/run-apps
-Environment="QT_QPA_PLATFORM=wayland"
-Restart=always
+Environment="XDG_RUNTIME_DIR=/run/user/0"
+Restart=on-failure
 RestartSec=5
 
 [Install]

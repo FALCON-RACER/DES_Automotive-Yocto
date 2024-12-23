@@ -17,5 +17,6 @@ inherit systemd
 
 SYSTEMD_SERVICE:${PN} = "run-apps.service"
 SYSTEMD_AUTO_ENABLE = "enable"
+FILES:${PN} += "${systemd_system_unitdir}/run-apps.service"
 
-RDEPENDS:${PN} = "systemd weston qtwayland instrument-cluster head-unit"
+RDEPENDS:${PN} = "systemd qtwayland instrument-cluster head-unit"
