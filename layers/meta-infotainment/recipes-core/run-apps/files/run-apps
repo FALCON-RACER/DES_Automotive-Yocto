@@ -2,8 +2,6 @@
 
 SOCKET_PATH="/run/user/0/wayland-0"
 
-echo "sibal fuck"
-
 while [ ! -S "$SOCKET_PATH" ]; do
     echo "Waiting for Wayland compositor to be ready..."
     sleep 1
