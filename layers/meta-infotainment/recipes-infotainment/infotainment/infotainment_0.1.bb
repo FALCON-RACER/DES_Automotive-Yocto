@@ -16,6 +16,8 @@ NETWORK_PACKAGES = "\
     wpa-supplicant \
     can-utils \
     openssh \
+    vsomeip \
+    boost \
 "
 
 QT_PACKAGES = "\
