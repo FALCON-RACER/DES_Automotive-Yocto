@@ -1,1 +1,1 @@
-PACKAGECONFIG:append = " gles2"
+PACKAGECONFIG:append = " gles2 fontconfig"
