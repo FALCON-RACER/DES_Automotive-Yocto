@@ -31,7 +31,6 @@ QT_PACKAGES = "\
 
 GRAPHICS_PACKAGES = "\
     mesa \
-    mesa-demos \
     mesa-gl \
     wayland \
     wayland-protocols \
