@@ -10,6 +10,7 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
 IMAGE_BOOT_FILES:append = " vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-dsi-waveshare-panel.dtbo"
+LICENSE_FLAGS_ACCEPTED += "commercial"
 
 EOF
 )
