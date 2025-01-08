@@ -18,6 +18,8 @@ DEPENDS +=" \
 	qtdeclarative-native \
 	qtwayland \
     qtwebengine \
+    qtmultimedia \
+    qt5compat \
 "
 
 do_install() {

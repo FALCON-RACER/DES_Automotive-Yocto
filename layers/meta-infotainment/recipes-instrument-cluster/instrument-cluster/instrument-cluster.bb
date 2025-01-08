@@ -17,6 +17,7 @@ DEPENDS +=" \
 	qtwayland \
 	qtdeclarative \
 	qtdeclarative-native \
+    qt5compat \
 "
 
 do_install() {
