@@ -31,6 +31,7 @@ QT_PACKAGES = "\
 GRAPHICS_PACKAGES = "\
     wayland \
     wayland-layer-manager \
+    mesa \
 "
 
 APPLICATION_PACKAGES = "\
