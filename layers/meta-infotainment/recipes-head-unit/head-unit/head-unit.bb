@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 SRC_URI = "git://github.com/FALCON-RACER/DES_Head-Unit.git;protocol=https;branch=main"
 
-SRCREV = "42092bb4007d94663a4cf2af8f1552fe7c4f1fee"
+SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git/apps/HeadUnit"
 
@@ -17,6 +17,7 @@ DEPENDS +=" \
 	qtdeclarative \
 	qtdeclarative-native \
 	qtwayland \
+    qtwebengine \
 "
 
 do_install() {
