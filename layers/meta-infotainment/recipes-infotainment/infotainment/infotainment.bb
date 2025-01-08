@@ -24,6 +24,8 @@ QT_PACKAGES = "\
     qtwayland \
     qttools \
     qtwebengine \
+    qtmultimedia \
+    qt5compat \
 "
 
 GRAPHICS_PACKAGES = "\
