@@ -26,12 +26,16 @@ QT_PACKAGES = "\
     qtwebengine \
     qtmultimedia \
     qt5compat \
+    qtsvg \
 "
 
 GRAPHICS_PACKAGES = "\
-    wayland \
-    wayland-layer-manager \
     mesa \
+    mesa-demos \
+    mesa-gl \
+    wayland \
+    wayland-protocols \
+    wayland-layer-manager \
 "
 
 APPLICATION_PACKAGES = "\
