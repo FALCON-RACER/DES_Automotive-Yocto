@@ -9,10 +9,9 @@ DISTRO_FEATURES:remove = " x11 sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+IMAGE_BOOT_FILES:append = " vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-dsi-waveshare-panel.dtbo"
 
 EOF
 )
-
-IMAGE_BOOT_FILES:append = " vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-dsi-waveshare-panel.dtbo"
 
 echo "$SETTINGS" >> ../build/conf/local.conf

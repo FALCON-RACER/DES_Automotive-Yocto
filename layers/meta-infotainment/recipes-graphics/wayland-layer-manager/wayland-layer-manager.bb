@@ -23,9 +23,6 @@ do_install() {
     install -d ${D}${bindir}
     install -m 0755 ${B}/wayland-layer-manager ${D}${bindir}/wayland-layer-manager
 
-    install -d ${D}${bindir}
-    install -m 0755 ${WORKDIR}/export-env ${D}${bindir}/export-env
-
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/wayland-layer-manager.service ${D}${systemd_unitdir}/system/wayland-layer-manager.service
 }

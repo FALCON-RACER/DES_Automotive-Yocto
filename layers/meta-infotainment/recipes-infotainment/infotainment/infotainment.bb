@@ -23,6 +23,7 @@ QT_PACKAGES = "\
     qtdeclarative \
     qtwayland \
     qttools \
+    qtwebengine \
 "
 
 GRAPHICS_PACKAGES = "\
