@@ -1,7 +1,7 @@
 [Unit]
 Description=Instrument Cluster
-After=wayland-layer-manager.service
-Requires=wayland-layer-manager.service
+After=ivi-compositor.service
+Requires=ivi-compositor.service
 
 [Service]
 Type=simple

@@ -1,7 +1,7 @@
 [Unit]
 Description=Head Unit Service
-After=wayland-layer-manager.service
-BindsTo=wayland-layer-manager.service
+After=ivi-compositor.service
+BindsTo=ivi-compositor.service
 
 [Service]
 Type=simple

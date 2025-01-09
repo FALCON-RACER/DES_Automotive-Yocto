@@ -1,12 +1,13 @@
 [Unit]
-Description=Wayland Layer Manager Compositor
+Description=Qt Wayland Compositor Service
 After=graphical.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/wayland-layer-manager
+ExecStart=/usr/bin/ivi-compositor
 Environment="XDG_RUNTIME_DIR=/run/user/0"
 Environment="QT_QPA_PLATFORM=eglfs"
+Environment="WAYLAND_DEBUG=1"
 Restart=on-failure
 RestartSec=5
 

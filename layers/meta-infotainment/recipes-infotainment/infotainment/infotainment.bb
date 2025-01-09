@@ -33,7 +33,7 @@ GRAPHICS_PACKAGES = "\
     mesa \
     wayland \
     wayland-protocols \
-    wayland-layer-manager \
+    ivi-compositor \
 "
 
 APPLICATION_PACKAGES = "\
