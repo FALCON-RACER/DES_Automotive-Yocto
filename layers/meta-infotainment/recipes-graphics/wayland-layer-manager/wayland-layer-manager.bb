@@ -15,9 +15,10 @@ S = "${WORKDIR}"
 
 DEPENDS = "qtbase qtdeclarative qtdeclarative-native qtwayland qtwayland-native"
 
-inherit cmake qt6-cmake
+inherit cmake qt6-cmake systemd
 
 FILES:${PN} += "${bindir}/*"
+FILES:${PN} += "${systemd_unitdir}/system/wayland-layer-manager.service"
 
 do_install() {
     install -d ${D}${bindir}
@@ -27,6 +28,5 @@ do_install() {
     install -m 0644 ${WORKDIR}/wayland-layer-manager.service ${D}${systemd_unitdir}/system/wayland-layer-manager.service
 }
 
-FILES:${PN} += "${systemd_system_unitdir}/wayland-layer-manager.service"
 SYSTEMD_SERVICE:${PN} = "wayland-layer-manager.service"
 
