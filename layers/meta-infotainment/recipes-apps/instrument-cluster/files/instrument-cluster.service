@@ -1,0 +1,16 @@
+[Unit]
+Description=Instrument Cluster
+After=wayland-layer-manager.service
+Requires=wayland-layer-manager.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/instrument-cluster
+Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment="QT_IVI_SURFACE_ID=2000"
+Environment="QT_QPA_PLATFORM=wayland"
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
