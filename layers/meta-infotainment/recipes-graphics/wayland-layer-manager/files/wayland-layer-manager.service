@@ -1,11 +1,12 @@
 [Unit]
 Description=Wayland Layer Manager Compositor
-After=multi-user.target
+After=graphical.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/wayland-layer-manager
 Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment="QT_QPA_PLATFORM=eglfs"
 Restart=on-failure
 RestartSec=5
 
