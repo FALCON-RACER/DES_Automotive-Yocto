@@ -17,4 +17,6 @@ LICENSE_FLAGS_ACCEPTED += "commercial"
 EOF
 )
 
-echo "$SETTINGS" >> ../build/conf/local.conf
+CONF_DIR=$(realpath "$(dirname "$0")/../build/conf")
+
+echo "$SETTINGS" >> "$CONF_DIR/local.conf"
