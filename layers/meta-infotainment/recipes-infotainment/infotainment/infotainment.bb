@@ -31,6 +31,7 @@ QT_PACKAGES = "\
 
 GRAPHICS_PACKAGES = "\
     mesa \
+    kmscube \
     wayland \
     wayland-protocols \
     ivi-compositor \
@@ -58,6 +59,11 @@ CUSTOM_PACKAGES = "\
 PIRACER_PACKAGES = "\
 "
 
+FONT_PACKAGES = "\
+    ttf-dejavu-sans \
+    ttf-dejavu-sans-mono \
+"
+
 IMAGE_INSTALL += "\
     ${SYSTEM_PACKAGES} \
     ${NETWORK_PACKAGES} \
@@ -66,4 +72,5 @@ IMAGE_INSTALL += "\
     ${APPLICATION_PACKAGES} \
     ${PIRACER_PACKAGES} \
     ${CUSTOM_PACKAGES} \
+    ${FONT_PACKAGES} \
 "
