@@ -22,7 +22,7 @@ do_deploy:append() {
     echo "dtparam=audio=on" >> $CONFIG
     echo "arm_bit64=1" >> $CONFIG
 
-    echo "gpu_mem_256=256" >> $CONFIG
+    echo "gpu_mem=512" >> $CONFIG
     echo "dtoverlay=dwc2,dr_mode=host" >> $CONFIG
     
     echo "disable_splash=1" >> $CONFIG

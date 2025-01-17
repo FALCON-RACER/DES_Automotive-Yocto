@@ -24,11 +24,24 @@ QT_PACKAGES = "\
     qtwayland \
     qttools \
     qtwebengine \
+    qtmultimedia \
+    qt5compat \
+    qtsvg \
 "
 
 GRAPHICS_PACKAGES = "\
+    mesa \
+    kmscube \
     wayland \
-    wayland-layer-manager \
+    wayland-protocols \
+    ivi-compositor \
+    gst-devtools \
+    gstreamer1.0 \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-libav \
+    gstreamer1.0-meta-base \
 "
 
 APPLICATION_PACKAGES = "\
@@ -41,7 +54,14 @@ CUSTOM_PACKAGES = "\
     wpa-config \
     sshd-config \
     autologin \
-    run-apps \
+"
+
+PIRACER_PACKAGES = "\
+"
+
+FONT_PACKAGES = "\
+    ttf-dejavu-sans \
+    ttf-dejavu-sans-mono \
 "
 
 IMAGE_INSTALL += "\
@@ -50,5 +70,7 @@ IMAGE_INSTALL += "\
     ${QT_PACKAGES} \
     ${GRAPHICS_PACKAGES} \
     ${APPLICATION_PACKAGES} \
+    ${PIRACER_PACKAGES} \
     ${CUSTOM_PACKAGES} \
+    ${FONT_PACKAGES} \
 "

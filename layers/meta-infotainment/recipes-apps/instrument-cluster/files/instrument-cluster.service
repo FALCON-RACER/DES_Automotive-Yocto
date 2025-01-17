@@ -1,0 +1,17 @@
+[Unit]
+Description=Instrument Cluster
+After=ivi-compositor.service
+Requires=ivi-compositor.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/instrument-cluster
+Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment="QT_IVI_SURFACE_ID=2000"
+Environment="QT_QPA_PLATFORM=wayland"
+Environment="QT_LOGGING_RULES=qt.qpa.wayland.*=true"
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
