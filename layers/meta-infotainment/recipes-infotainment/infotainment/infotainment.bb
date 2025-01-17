@@ -34,6 +34,13 @@ GRAPHICS_PACKAGES = "\
     wayland \
     wayland-protocols \
     ivi-compositor \
+    gst-devtools \
+    gstreamer1.0 \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-libav \
+    gstreamer1.0-meta-base \
 "
 
 APPLICATION_PACKAGES = "\
@@ -46,7 +53,9 @@ CUSTOM_PACKAGES = "\
     wpa-config \
     sshd-config \
     autologin \
-    run-apps \
+"
+
+PIRACER_PACKAGES = "\
 "
 
 IMAGE_INSTALL += "\
@@ -55,5 +64,6 @@ IMAGE_INSTALL += "\
     ${QT_PACKAGES} \
     ${GRAPHICS_PACKAGES} \
     ${APPLICATION_PACKAGES} \
+    ${PIRACER_PACKAGES} \
     ${CUSTOM_PACKAGES} \
 "
