@@ -2,7 +2,6 @@ ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
 
 do_deploy:append() { 
-    echo "hdmi_safe=1" >> $CONFIG
     echo "dtparam=i2c_arm=on" >> $CONFIG
     echo "dtoverlay=spi1-3cs" >> $CONFIG
     echo "dtoverlay=spi0-3cs" >> $CONFIG
@@ -10,8 +9,6 @@ do_deploy:append() {
     echo "dtoverlay=mcp251xfd,spi1-0,interrupt=24" >> $CONFIG
 
     echo "camera_auto_detect=1" >> $CONFIG
-
-    echo "display_auto_detect=1" >> $CONFIG
 
     echo "dtoverlay=vc4-kms-v3d-pi4" >> $CONFIG
     echo "dtoverlay=vc4-kms-dsi-waveshare-panel,7_9_inch" >> $CONFIG
@@ -25,6 +22,8 @@ do_deploy:append() {
     echo "gpu_mem=512" >> $CONFIG
     echo "dtoverlay=dwc2,dr_mode=host" >> $CONFIG
     
+    echo "hdmi_safe=1" >> $CONFIG
+
     echo "disable_splash=1" >> $CONFIG
 }
 
