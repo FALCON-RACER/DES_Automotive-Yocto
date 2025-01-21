@@ -15,6 +15,7 @@ IMAGE_BOOT_FILES:append = " vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-ds
 LICENSE_FLAGS_ACCEPTED += "commercial"
 ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
+WAVESHARE_1024X600_C_2.1 = "1"
 
 EOF
 )
