@@ -11,7 +11,10 @@ PREFERRED_PROVIDER_virtual/libgl = "mesa"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
-IMAGE_BOOT_FILES:append = " vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-dsi-waveshare-panel.dtbo"
+IMAGE_BOOT_FILES:append = " \
+       vc4-kms-dsi-waveshare-panel.dtbo;overlays/vc4-kms-dsi-waveshare-panel.dtbo \
+       mcp251xfd.dtbo;overlays/mcp251xfd.dtbo \
+"
 LICENSE_FLAGS_ACCEPTED += "commercial"
 ENABLE_I2C = "1"
 KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"

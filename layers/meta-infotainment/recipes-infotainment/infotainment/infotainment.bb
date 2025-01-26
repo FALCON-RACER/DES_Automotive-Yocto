@@ -31,7 +31,6 @@ QT_PACKAGES = "\
 
 GRAPHICS_PACKAGES = "\
     mesa \
-    kmscube \
     wayland \
     wayland-protocols \
     ivi-compositor \
@@ -50,7 +49,7 @@ APPLICATION_PACKAGES = "\
 "
 
 CUSTOM_PACKAGES = "\
-    init-scripts \
+    can-setup \
     wpa-config \
     sshd-config \
     autologin \
