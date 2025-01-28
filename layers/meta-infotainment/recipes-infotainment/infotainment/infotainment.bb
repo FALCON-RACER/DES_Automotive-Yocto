@@ -10,12 +10,15 @@ IMAGE_ROOTFS_SIZE ?= "8192"
 
 SYSTEM_PACKAGES = "\
     systemd \
+    boost \
 "
 
 NETWORK_PACKAGES = "\
     wpa-supplicant \
     can-utils \
     openssh \
+    vsomeip \
+    vsomeip-example \
 "
 
 QT_PACKAGES = "\
