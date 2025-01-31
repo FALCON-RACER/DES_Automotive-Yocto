@@ -56,6 +56,7 @@ CUSTOM_PACKAGES = "\
     wpa-config \
     sshd-config \
     autologin \
+    ivi-user \
 "
 
 PIRACER_PACKAGES = "\
