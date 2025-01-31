@@ -4,14 +4,16 @@ After=graphical.target
 
 [Service]
 Type=simple
+User=ivi-user
+Group=ivi-group
 ExecStart=/usr/bin/ivi-compositor
-Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
 Environment="QT_QPA_PLATFORM=eglfs"
 Environment="QT_WAYLAND_CLIENT_BUFFER_INTEGRATION=linux-dmabuf-unstable-v1"
 Environment="QT_WAYLAND_SERVER_BUFFER_INTEGRATION=dmabuf-server"
 Environment="QT_WAYLAND_SHELL_INTEGRATION=ivi-shell"
-Environment="QT_LOGGING_RULES=qt.waylandcompositor.*=true"
-Environment="WAYLAND_DEBUG=1"
+# Environment="QT_LOGGING_RULES=qt.waylandcompositor.*=true"
+# Environment="WAYLAND_DEBUG=1"
 Restart=on-failure
 RestartSec=5
 
