@@ -1,5 +1,5 @@
-SUMMARY = "Enable autologin for root on tty1"
-DESCRIPTION = "Automatically log in as root on tty1"
+SUMMARY = "Enable autologin for on tty1"
+DESCRIPTION = "Automatic login on tty1"
 LICENSE = "CLOSED"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"

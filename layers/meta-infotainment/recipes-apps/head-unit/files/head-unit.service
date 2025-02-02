@@ -5,11 +5,13 @@ BindsTo=ivi-compositor.service
 
 [Service]
 Type=simple
+User=ivi-user
+Group=ivi-group
 ExecStart=/usr/bin/head-unit
-Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
 Environment="QT_IVI_SURFACE_ID=1000"
 Environment="QT_QPA_PLATFORM=wayland"
-Environment="QT_LOGGING_RULES=qt.qpa.wayland.*=true"
+# Environment="QT_LOGGING_RULES=qt.qpa.wayland.*=true"
 Restart=always
 RestartSec=1
 
