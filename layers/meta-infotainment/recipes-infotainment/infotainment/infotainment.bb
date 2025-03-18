@@ -18,7 +18,8 @@ NETWORK_PACKAGES = "\
     can-utils \
     openssh \
     vsomeip \
-    vsomeip-example \
+    bluez5 \
+    pi-bluetooth \
 "
 
 QT_PACKAGES = "\
@@ -30,6 +31,7 @@ QT_PACKAGES = "\
     qtmultimedia \
     qt5compat \
     qtsvg \
+    qtconnectivity \
 "
 
 GRAPHICS_PACKAGES = "\
@@ -49,6 +51,7 @@ GRAPHICS_PACKAGES = "\
 APPLICATION_PACKAGES = "\
     instrument-cluster \
     head-unit \
+    service-manager \
 "
 
 CUSTOM_PACKAGES = "\
