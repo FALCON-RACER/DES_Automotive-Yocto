@@ -4,7 +4,7 @@ SETTINGS=$(cat <<EOF
 
 MACHINE ?= "raspberrypi4-64"
 PREFERRED_VERSION_linux-raspberrypi = "6.1%"
-DISTRO_FEATURES:append = " systemd bluetooth wayland pam opengl kms egl"
+DISTRO_FEATURES:append = " systemd bluetooth wayland pam opengl kms egl bluez5"
 DISTRO_FEATURES:remove = " x11 sysvinit"
 PREFERRED_PROVIDER_virtual/egl = "mesa"
 PREFERRED_PROVIDER_virtual/libgl = "mesa"
