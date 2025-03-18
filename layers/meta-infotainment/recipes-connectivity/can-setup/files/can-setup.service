@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/sbin/ip link set can0 up type can bitrate 500000
+ExecStart=/sbin/ip link set can0 up type can bitrate 500000 fd off
 ExecStop=/sbin/ip link set can0 down
 RemainAfterExit=true
 

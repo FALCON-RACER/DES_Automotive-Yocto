@@ -1,0 +1,13 @@
+[Unit]
+Description=Server service
+
+[Service]
+Type=simple
+User=ivi-user
+Group=ivi-group
+ExecStart=/usr/bin/server
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
