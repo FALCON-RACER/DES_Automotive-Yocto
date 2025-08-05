@@ -43,11 +43,16 @@ systemctl stop ivi-compositor
 ```
 Then set a password using `passwd` and check the RPI's IP address using `ifconfig`.
 Now you are ready to access your Raspberry Pi through SSH.
-Make sure your host machine for development is in the same network with the RPi.
+Make sure your host machine for development is in the same network with the RPi - WLAN access information can be configured in `layers/meta-infotainment/recipes-connectivity/wpa-config/files/wpa_supplicant.conf` (it is hardcoded - just for development).
 
 ### 3.2. How to start/stop a service
-Currently we have instrument-cluster, head-unit, ivi-compositor, service-manager servicies.
-When you want to run a service: `systemctl start [service name]`, and when you want to stop a service: `systemctl stop [service name]`
+We currently have the following systemd services:
+- instrument-cluster
+- head-unit
+- ivi-compositor
+- service-manager servicies
+To start a service: `systemctl start [service name]`
+To stop a service: `systemctl stop [service name]`
 
-### 3.3. How to check service log
+### 3.3. How to check service log for debugging
 `journalctl -u [service name]`
