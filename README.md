@@ -1,6 +1,6 @@
 # DES_Automotive-Yocto
 
-This repository is for building Yocto Linux infotainment system for Raspberry Pi 4B.
+This repository contains everything needed to build a Yocto-based Linux infotainment system for the Raspberry Pi 4B.
 
 ## 📌 1. How to Build
 
@@ -15,33 +15,35 @@ bitbake infotainment
 
 ## 📌 2. Directory Structure
 #### layers
-all the layers (poky, meta-qt6, meta-raspberrypi, etc) will be here including our custom layer (meta-infotainment)
+Contains all layers, including Poky, meta-qt6, meta-raspberrypi, and our custom layer meta-infotainment.
 #### layers/recipes-bsp
-BSP for Raspberry Pi 4B
+Board Support Package for Raspberry Pi 4B
 #### layers/recipes-infotainment
-recipes for a custom image
+Recipes for the custom infotainment image
 #### layers/recipes-connectivity
-Bluetooth, VSOMEIP, SSH, CAN, etc.
+Connectivity components such as Bluetooth, VSOMEIP, SSH, and CAN
 #### layers/recipes-kernel
-fix linux kernel version to a specific one
+Fixes the Linux kernel version to a specific release
 #### layers/recipes-core
-automatic login and a user (for runnin applications with limited authority) creation
+Includes auto-login configuration and limited-privilege user creation for running applications
 #### layers/recipes-qt6
-Qt6 recipes bbappends
+Qt6 bbappend files and customizations
 #### layers/recipes-apps
-recipes for applications
+Recipes for infotainment applications
 #### layers/recipes-graphics
-a recipe for IVI graphical compositor using QtWayland
+Recipe for the IVI graphical compositor using Qt Wayland
 
 ## 📌 3. Tips
 ### 3.1. Working with SSH
-Connect a keyboard to a Raspberry Pi and type following commands:
+Since the connected displays (DSI, HDMI) are rendering the GUI applications, you won't see the command line interface.
+Connect a keyboard to your Raspberry Pi and type the following commands:
 ```
 sudo -
 systemctl stop ivi-compositor
 ```
-Then set a password using `passwd` and check the RPI's IP address.
+Then set a password using `passwd` and check the RPI's IP address using `ifconfig`.
 Now you are ready to access your Raspberry Pi through SSH.
+Make sure your host machine for development is in the same network with the RPi.
 
 ### 3.2. How to start/stop a service
 Currently we have instrument-cluster, head-unit, ivi-compositor, service-manager servicies.
