@@ -1,8 +1,11 @@
 # DES_Automotive-Yocto
 
-This repository contains everything needed to build a Yocto-based Linux infotainment system for the Raspberry Pi 4B.
+This repository contains components needed to build a Yocto-based Linux infotainment system including Head Unit and Instrument Cluster applications for Raspberry Pi.
 
-## 📌 1. How to Build
+## 📌 Architecture
+<img width="680" alt="image" src="https://github.com/user-attachments/assets/713a010d-d7db-41e0-a17e-6d08636f4c0f" />
+
+## 📌 How to Build
 
 ```sh
 cd DES_Automotive-Yocto
@@ -13,7 +16,7 @@ source layers/poky/oe-init-build-env
 bitbake infotainment
 ```
 
-## 📌 2. Directory Structure
+## 📌 Directory Structure
 #### layers
 Contains all layers, including Poky, meta-qt6, meta-raspberrypi, and our custom layer meta-infotainment.
 #### layers/recipes-bsp
@@ -33,8 +36,8 @@ Recipes for infotainment applications
 #### layers/recipes-graphics
 Recipe for the IVI graphical compositor using Qt Wayland
 
-## 📌 3. Tips
-### 3.1. Working with SSH
+## 📌 Tips
+### Working with SSH
 Since the connected displays (DSI, HDMI) are rendering the GUI applications, you won't see the command line interface.
 Connect a keyboard to your Raspberry Pi and type the following commands:
 ```
@@ -45,7 +48,7 @@ Then set a password using `passwd` and check the RPI's IP address using `ifconfi
 Now you are ready to access your Raspberry Pi through SSH.
 Make sure your host machine for development is in the same network with the RPi - WLAN access information can be configured in `layers/meta-infotainment/recipes-connectivity/wpa-config/files/wpa_supplicant.conf` (it is hardcoded - just for development).
 
-### 3.2. How to start/stop a service
+### How to start/stop a service
 We currently have the following systemd services:
 - instrument-cluster
 - head-unit
