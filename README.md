@@ -1,6 +1,14 @@
 # DES_Automotive-Yocto
 
-This repository contains components needed to build a Yocto-based Linux infotainment system including Head Unit and Instrument Cluster applications for Raspberry Pi.
+This repository contains a Yocto-based Automotive IVI platform integration project designed to build a custom Linux image integrating a Head Unit and an Instrument Cluster on a single system.
+
+The project focuses on layered Yocto design, graphics stack integration, and application-level composition control, following common Automotive IVI architecture principles.
+
+## Key Objectives
+- Build a reproducible and maintainable IVI Linux image using Yocto.
+- Integrate multiple automotive applications within a unified graphics environment.
+- Control application startup, rendering, and system behavior through Yocto recipes and system services.
+- Establish a scalable layer structure suitable for future automotive platform expansion.
 
 ## 📌 Architecture
 ```mermaid
@@ -49,6 +57,25 @@ flowchart TB
   Qt --> HU
   Qt --> IC
 ```
+The system is built on top of the Yocto Project and structured using a clear layer hierarchy:
+#### Base Layers
+- Provide the Yocto build system, common packages, and BSP support.
+- Include Poky, meta-openembedded, and a Raspberry Pi BSP layer.
+#### Custom Infotainment Layer
+- A dedicated custom layer that integrates kernel customization, graphics stack configuration, and automotive applications.
+- Serves as the central integration point for the IVI platform.
+#### Kernel Customization
+- Kernel behavior and configuration are extended using bbappend files.
+- Hardware-specific and platform-level requirements are handled at the Yocto layer level.
+#### Graphics & Display Stack
+- Uses Qt with Wayland as the display backend.
+- An IVI compositor is configured to control rendering and separation between the Head Unit and Instrument Cluster.
+#### Userspace Applications
+- Head Unit and Instrument Cluster applications are built and packaged as individual Yocto recipes.
+- Applications are launched automatically at boot using systemd services.
+#### Final Image
+- A single custom Linux image is generated, containing the complete IVI platform.
+
 ## 📌 How to Build
 
 ```sh
