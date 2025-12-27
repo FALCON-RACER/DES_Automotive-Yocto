@@ -3,8 +3,52 @@
 This repository contains components needed to build a Yocto-based Linux infotainment system including Head Unit and Instrument Cluster applications for Raspberry Pi.
 
 ## 📌 Architecture
-<img width="680" alt="image" src="https://github.com/user-attachments/assets/713a010d-d7db-41e0-a17e-6d08636f4c0f" />
+```mermaid
+flowchart TB
+  subgraph Base["Yocto Base"]
+    Poky[Poky]
+    OE[meta-openembedded]
+    BSP[meta-raspberrypi]
+  end
 
+  subgraph Custom["Custom Layer"]
+    MI[meta-infotainment]
+  end
+
+  subgraph Kernel["Kernel Customization"]
+    KBB[linux-raspberrypi bbappend]
+  end
+
+  subgraph Graphics["Graphics & Display"]
+    IVI[IVI Compositor]
+    Qt[Qt / Wayland]
+  end
+
+  subgraph Applications["Userspace Applications"]
+    HU[Head Unit App]
+    IC[Instrument Cluster App]
+    SM[Service Manager]
+  end
+
+  subgraph Image["Final Image"]
+    IMG[Infotainment Image]
+  end
+
+  Poky --> MI
+  OE --> MI
+  BSP --> MI
+
+  MI --> KBB
+  MI --> IVI
+  MI --> HU
+  MI --> IC
+  MI --> SM
+  MI --> IMG
+
+  IVI --> Qt
+  Qt --> HU
+  Qt --> IC
+```
 ## 📌 How to Build
 
 ```sh
