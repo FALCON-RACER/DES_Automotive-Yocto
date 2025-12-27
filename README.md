@@ -12,7 +12,7 @@ The project focuses on layered Yocto design, graphics stack integration, and app
 - Control application startup, rendering, and system behavior through Yocto recipes and system services.
 - Establish a scalable layer structure suitable for future automotive platform expansion.
 
-## 📌 Architecture
+## 📌 Layer Structure
 ```mermaid
 flowchart TB
   subgraph Base["Yocto Base"]
