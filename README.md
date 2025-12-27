@@ -4,6 +4,8 @@ This repository contains a Yocto-based Automotive IVI platform integration proje
 
 The project focuses on layered Yocto design, graphics stack integration, and application-level composition control, following common Automotive IVI architecture principles.
 
+<img src="https://github.com/user-attachments/assets/d85663eb-38b2-4eb2-bad3-1d069a84086a" width="300"/>
+
 ## Key Objectives
 - Build a reproducible and maintainable IVI Linux image using Yocto.
 - Integrate multiple automotive applications within a unified graphics environment.
